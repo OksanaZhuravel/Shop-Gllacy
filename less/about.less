@@ -1,0 +1,65 @@
+ .about {
+   display: flex;
+   justify-content: center;
+   width: 100%;
+   padding: 0 0 40px 0;
+   margin: 0;
+   &-wrap {
+     max-width: 1146px;
+     max-height: 305px;
+     background-image: url(../img/vaflyafon.png);
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     border-radius: 15px;
+   }
+   &-title {
+     font-size: 24px;
+     line-height: 30px;
+     font-weight: 500;
+     color: #323232;
+     margin: 0;
+     padding: 23px 0 5px 21px;
+   }
+   &-list {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-evenly;
+     width: 100%;
+     list-style: none;
+     list-style-position: inside;
+     margin: 15px 0 0 0;
+     padding: 0;
+     &-item {
+       width: 50%;
+       max-width: 480px;
+       padding: 0 0 0 60px;
+       color: #323232;
+       position: relative;
+       margin: 0 0 23px 0;
+       &::before {
+         content: "";
+         display: block;
+         position: absolute;
+         top: -12px;
+         left: 0;
+         width: 49px;
+         height: 49px;
+         background-image: url(../img/morozhenko_2987.png);
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-color: #eee3c9;
+       }
+       &:nth-child(2):before {
+         background-image: url(../img/korova_2991.png);
+       }
+       &:nth-child(3):before {
+         background-image: url(../img/listik_2993.png);
+       }
+       &:nth-child(4):before {
+         background-image: url(../img/gradusnik_2989.png);
+       }
+     }
+   }
+ }

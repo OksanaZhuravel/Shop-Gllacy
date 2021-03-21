@@ -1,0 +1,66 @@
+html {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: "roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+body > input[type="radio"] {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.site-wrapper {
+  min-width: 940px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  transition: background-image 0.5s ease, background-color 0.5s ease;
+  &::before,
+  &::after {
+    content: "";
+    visibility: hidden;
+  }
+  &::before {
+    background-image: url(../img/slide2.png);
+  }
+  &::after {
+    background-image: url(../img/slide3.png);
+  }
+}
+
+.content-wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.catalag-wrapper {
+  background-color: #849d8f;
+  background-image: linear-gradient(to bottom, #9cb0a5 1%, #849d8f 40%);
+}
