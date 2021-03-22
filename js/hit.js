@@ -1,9 +1,60 @@
+const API = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
+class HitList {
+  constructor(container = '.hit-list') {
+    this.container = container;
+    this.hits = []; //массив товаров
+    this.allItem = [];//массив объектов
+    this._getProducts()
+    .then(data => {
+      this.hits = [...data];
+      this.render()
+    });
+  }
+  __getProducts(){
+ return fetch(`${API}/catalogData.json`)
+            .then(result => result.json())
+            .catch(error => {
+                console.log(error);
+            })
+    }
+    calcSum(){
+        return this.allItem.reduce((accum, item) => accum += item.price, 0);
+    }
+
+
+ /* _fetchHits() {
+    this.hits = [
+      {mintitle: 'Сливочное с апельсином',
+       img: 'img/1.jpg',
+       price: 310,
+       title: 'Сливочное с апельсиновым джемом и цитрусовой стружкой'},
+      {mintitle: 'Сливочно-кофейное',
+       img: 'img/2.jpg',
+       price: 380,
+       title: 'Сливочно-кофейное с кусочками шоколада'},
+      {mintitle: 'Сливочно-клубничное',
+       img: 'img/3.jpg',
+       price: 355,
+       title: 'Сливочно-клубничное с присыпкой из белого шоколада'},
+    ];
+  }*/
+  render(){
+    const hitItem =
+          document.querySelector(this.container);
+  for(let product of this.hits){
+    const productObj = new HitItem(product);
+    this.allItem.push(productObj);
+    /*hitItem.innerHTML += productObj.render();*/
+    hitItem.insertAdjacentHTML('beforeend', productObj.render());
+   }
+  }
+}
 class HitItem {
-  constructor(mintitle, img, price, title) {
-    this.mintitle = mintitle;
-    this.img = img;
-    this.price = price;
-    this.title = title;
+  constructor(product) {
+    this.mintitle = product.mintitle;
+    this.img = product.img;
+    this.price = product.price;
+    this.title = product.title;
   }
   render() {
     return `<li class="hit-list-item ">
@@ -15,43 +66,9 @@ class HitItem {
                 <p class="hit-list-text">
                   <a href="#">${this.title}</a>
                 </p>
-                <a href="#" class="hit-list-link visually">Быстрый просмотр</a>
+                <button href="#" class="hit-list-link visually">Быстрый просмотр</button>
               </li>`
   }
 }
-class HitList {
-  constructor() {
-    this.hits = [];
-  }
-  fetchHits() {
-    this.hits = [
-      {
-        mintitle: 'Сливочное с апельсином'
-        , img: 'img/1.jpg'
-        , price: 310
-        , title: 'Сливочное с апельсиновым джемом и цитрусовой стружкой'
-      }, {
-        mintitle: 'Сливочно-кофейное'
-        , img: 'img/2.jpg'
-        , price: 380
-        , title: 'Сливочно-кофейное с кусочками шоколада'
-      }, {
-        mintitle: 'Сливочно-клубничное'
-        , img: 'img/3.jpg'
-        , price: 355
-        , title: 'Сливочно-клубничное с присыпкой из белого шоколада'
-      }
-, ];
-  }
-  render() {
-    let listHtml = '';
-    this.hits.forEach(hit => {
-      const hitItem = new HitItem(hit.mintitle, hit.img, hit.price, hit.title);
-      listHtml += hitItem.render();
-    });
-    document.querySelector('.hit-list').innerHTML = listHtml;
-  }
-}
 const list =new HitList();
-list.fetchHits();
 list.render();
