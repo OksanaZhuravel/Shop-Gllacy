@@ -1,96 +1,113 @@
 .footer {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  &-social {
     display: flex;
+    justify-content: flex-start;
     align-items: center;
-    list-style: none;
-    margin: 0 0 0 31px;
-    padding: 0;
-    & li {
-      margin: 0 12px 0 0;
-      opacity: 0.8;
-      &:hover {
-        opacity: 1;
-      }
-      &:active {
-        opacity: 0.7;
-      }
-      & svg {
-        width: 32px;
-        height: 32px;
-        border: 2px solid #ffffff;
-        opacity: 0.5;
-        border-radius: 50%;
-      }
-      &:nth-child(4) {
-        margin: 0 0 0 0;
-      }
+
+    &-social {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin: 0 0 0 31px;
+        padding: 0;
+
+        & li {
+            margin: 0 12px 0 0;
+            opacity: 0.8;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &:active {
+                opacity: 0.7;
+            }
+
+            & svg {
+                width: 32px;
+                height: 32px;
+                border: 2px solid #ffffff;
+                opacity: 0.5;
+                border-radius: 50%;
+            }
+
+            &:nth-child(4) {
+                margin: 0 0 0 0;
+            }
+        }
+
+        &-link {
+            color: #ffffff;
+        }
     }
-    &-link {
-      color: #ffffff;
+
+    &-suppliers {
+        max-width: 340px;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 13px;
+        line-height: 18px;
+        font-weight: 400;
+        color: #ffffff;
+        text-decoration: underline;
+        margin: 0 195px 0 240px;
+
+        a {
+            margin: 30px 30px 10px 0;
+            color: #ffffff;
+
+            &:nth-child(1)::before {
+                content: "";
+                display: block;
+                width: 15px;
+                height: 13px;
+                position: absolute;
+                top: 38px;
+                left: -23px;
+                background-image: url(../svg/heart.svg);
+                background-size: 100%;
+                background-color: transparent;
+                background-position: center;
+            }
+
+            &:nth-child(2) {
+                margin: 32px 0 9px 0;
+            }
+
+            &:nth-child(3) {
+                margin: 0 44px 31px 0;
+            }
+
+            &:nth-child(4) {
+                margin: 0 0 31px 0;
+            }
+        }
     }
-  }
-  &-suppliers {
-    max-width: 340px;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 13px;
-    line-height: 18px;
-    font-weight: 400;
-    color: #ffffff;
-    text-decoration: underline;
-    margin: 0 195px 0 240px;
-    a {
-      margin: 30px 30px 10px 0;
-      color: #ffffff;
-      &:nth-child(1)::before {
-        content: "";
-        display: block;
-        width: 15px;
-        height: 13px;
-        position: absolute;
-        top: 38px;
-        left: -23px;
-        background-image: url(../svg/heart.svg);
-        background-size: 100%;
-        background-color: transparent;
-        background-position: center;
-      }
-      &:nth-child(2) {
-        margin: 32px 0 9px 0;
-      }
-      &:nth-child(3) {
-        margin: 0 44px 31px 0;
-      }
-      &:nth-child(4) {
-        margin: 0 0 31px 0;
-      }
+
+    &-copyright {
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 400;
+        margin: 0 0 15px 0;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 110px;
+            height: 40px;
+            margin: 0;
+            background-image: url(../svg/logo-htmlacademy.svg);
+            background-size: 100%;
+            background-color: transparent;
+            background-position: center;
+        }
     }
-  }
-  &-copyright {
-    font-size: 12px;
-    line-height: 18px;
-    font-weight: 400;
-    margin: 0 0 15px 0;
-    &::before {
-      content: "";
-      display: block;
-      width: 110px;
-      height: 40px;
-      margin: 0;
-      background-image: url(../svg/logo-htmlacademy.svg);
-      background-size: 100%;
-      background-color: transparent;
-      background-position: center;
+
+    &-academy {
+        color: #fefefe;
     }
-  }
-  &-academy {
-    color: #fefefe;
-  }
-  b {
-    text-decoration: underline;
-  }
+
+    b {
+        text-decoration: underline;
+    }
 }

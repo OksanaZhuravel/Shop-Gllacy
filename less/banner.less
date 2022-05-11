@@ -1,91 +1,107 @@
 .banner {
-  padding: 35px 0 0 0;
-  &-container {
-    width: 100%;
-    color: #ffffff;
-    padding: 5px 0 40px 0;
-  }
-  &-list {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0;
-    padding: 0;
-  }
-  &-item {
-    min-width: 560px;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    border-radius: 15px;
-  }
-  &-title {
-    margin: 20px 0 15px 20px;
-    font-size: 35px;
-    line-height: 41px;
-    font-weight: 700;
-  }
-  &-text {
-    max-width: 511px;
-    margin: 0 0 45px 20px;
-    font-size: 18px;
-    font-weight: 700;
-  }
-  &-btn {
-    align-self: flex-end;
-    padding: 10px;
-    margin: 0 20px 25px 0;
-    border: none;
-    border-radius: 45px;
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 700;
-    color: #ffffff;
-    text-align: center;
-    opacity: 0.98;
-    background-image: linear-gradient(0.0deg, #ca3824 0%, #f26843 100%);
-    box-shadow: 0 2px 2px 0 rgba(85, 7, 0, 0.54);
-    &:active {
-      color: #fceeec;
-      background-color: #ffffff;
-      background-image: linear-gradient(0.0deg, #e1613e 0%, #d74531 100%);
+    padding: 35px 0 0 0;
+
+    &-container {
+        width: 100%;
+        color: #ffffff;
+        padding: 5px 0 40px 0;
     }
-    &:hover {
-      color: #fefefe;
-      background-color: #ffffff;
-      background-image: linear-gradient(0.0deg, #eb6e5d 0%, #f48668 100%);
-      box-shadow: 0 1px 2px 0 #ab1000;
+
+    &-list {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0;
+        padding: 0;
     }
-    &:focus {
-      color: #fefefe;
-      background-color: #ffffff;
-      background-image: linear-gradient(0.0deg, #eb6e5d 0%, #f48668 100%);
-      box-shadow: 0 1px 2px 0 #ab1000;
+
+    &-item {
+
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        border-radius: 15px;
+
+        @media (min-width: 1068px) {
+            min-width: 560px;
+        }
     }
-    &:default {
-      color: gray;
-      background-color: darkgray;
+
+    &-title {
+        margin: 20px 0 15px 20px;
+        font-size: 35px;
+        line-height: 41px;
+        font-weight: 700;
     }
-  }
+
+    &-text {
+        max-width: 511px;
+        margin: 0 0 45px 20px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    &-btn {
+        align-self: flex-end;
+        padding: 10px;
+        margin: 0 20px 25px 0;
+        border: none;
+        border-radius: 45px;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 700;
+        color: #ffffff;
+        text-align: center;
+        opacity: 0.98;
+        background-image: linear-gradient(0.0deg, #ca3824 0%, #f26843 100%);
+        box-shadow: 0 2px 2px 0 rgba(85, 7, 0, 0.54);
+
+        &:active {
+            color: #fceeec;
+            background-color: #ffffff;
+            background-image: linear-gradient(0.0deg, #e1613e 0%, #d74531 100%);
+        }
+
+        &:hover {
+            color: #fefefe;
+            background-color: #ffffff;
+            background-image: linear-gradient(0.0deg, #eb6e5d 0%, #f48668 100%);
+            box-shadow: 0 1px 2px 0 #ab1000;
+        }
+
+        &:focus {
+            color: #fefefe;
+            background-color: #ffffff;
+            background-image: linear-gradient(0.0deg, #eb6e5d 0%, #f48668 100%);
+            box-shadow: 0 1px 2px 0 #ab1000;
+        }
+
+        &:default {
+            color: gray;
+            background-color: darkgray;
+        }
+    }
 }
 
 .fon-one {
-  background-color: crimson;
-  background-image: url(../img/malinovyyfon.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  & button {
-    min-width: 165px;
-  }
+    background-color: crimson;
+    background-image: url(../img/malinovyyfon.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    & button {
+        min-width: 165px;
+    }
 }
 
 .fon-two {
-  background-color: chocolate;
-  background-image: url(../img/shokoladnyyfon.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  & button {
-    min-width: 189px;
-  }
+    background-color: chocolate;
+    background-image: url(../img/shokoladnyyfon.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    & button {
+        min-width: 189px;
+    }
 }
